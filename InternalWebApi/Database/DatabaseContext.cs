@@ -1,18 +1,19 @@
-﻿using System;
+using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using InternalWebApi.Models;
 
 #nullable disable
 
-namespace InternalWebApi.Models
+namespace InternalWebApi.DatabaseContext
 {
-    public partial class demodatabaseContext : DbContext
+    public partial class DatabaseContext : DbContext
     {
-        public demodatabaseContext()
+        public DatabaseContext()
         {
         }
 
-        public demodatabaseContext(DbContextOptions<demodatabaseContext> options)
+        public DatabaseContext(DbContextOptions<DatabaseContext> options)
             : base(options)
         {
         }
@@ -24,14 +25,14 @@ namespace InternalWebApi.Models
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<Section> Sections { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseMySql("database=demodatabase;server=192.168.2.99;uid=usrrw;pwd=activerw", Microsoft.EntityFrameworkCore.ServerVersion.Parse("5.7.21-mysql"));
-            }
-        }
+//         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+//         {
+//             if (!optionsBuilder.IsConfigured)
+//             {
+// #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+//                 optionsBuilder.UseMySql("database=demodatabase;server=192.168.2.99;uid=usrrw;pwd=activerw", Microsoft.EntityFrameworkCore.ServerVersion.Parse("5.7.21-mysql"));
+//             }
+//         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
