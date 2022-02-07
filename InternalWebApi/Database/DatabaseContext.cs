@@ -5,7 +5,7 @@ using InternalWebApi.Models;
 
 #nullable disable
 
-namespace InternalWebApi.DatabaseContext
+namespace InternalWebApi.Database
 {
     public partial class DatabaseContext : DbContext
     {
