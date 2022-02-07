@@ -14,6 +14,7 @@ namespace InternalWebApi.Models
 
         public int RoleId { get; set; }
         public string RoleName { get; set; }
+        public DateTime CreateDate { get; set; }
 
         public virtual ICollection<Account> Accounts { get; set; }
     }

@@ -29,12 +29,14 @@ namespace InternalWebApi.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseMySQL("Database=demodatabase; Server=192.168.2.99; Uid=usrrw; Pwd=activerw;");
+                optionsBuilder.UseMySql("database=demodatabase;server=192.168.2.99;uid=usrrw;pwd=activerw", Microsoft.EntityFrameworkCore.ServerVersion.Parse("5.7.21-mysql"));
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.HasCharSet("utf8");
+
             modelBuilder.Entity<Account>(entity =>
             {
                 entity.ToTable("account");
@@ -46,7 +48,13 @@ namespace InternalWebApi.Models
 
                 entity.Property(e => e.AccountId)
                     .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
                     .HasColumnName("ACCOUNT_ID");
+
+                entity.Property(e => e.CreateDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("CREATE_DATE")
+                    .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                 entity.Property(e => e.Password)
                     .IsRequired()
@@ -78,7 +86,13 @@ namespace InternalWebApi.Models
 
                 entity.Property(e => e.DepartmentId)
                     .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
                     .HasColumnName("DEPARTMENT_ID");
+
+                entity.Property(e => e.CreateDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("CREATE_DATE")
+                    .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                 entity.Property(e => e.CreateUser)
                     .IsRequired()
@@ -93,6 +107,10 @@ namespace InternalWebApi.Models
                 entity.Property(e => e.Description)
                     .HasMaxLength(500)
                     .HasColumnName("DESCRIPTION");
+
+                entity.Property(e => e.LastDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("LAST_DATE");
 
                 entity.Property(e => e.LastUser)
                     .HasMaxLength(10)
@@ -115,7 +133,13 @@ namespace InternalWebApi.Models
 
                 entity.Property(e => e.EmployeeId)
                     .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
                     .HasColumnName("EMPLOYEE_ID");
+
+                entity.Property(e => e.CreateDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("CREATE_DATE")
+                    .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                 entity.Property(e => e.CreateUser)
                     .IsRequired()
@@ -139,6 +163,10 @@ namespace InternalWebApi.Models
                     .IsRequired()
                     .HasMaxLength(45)
                     .HasColumnName("FIRST_NAME");
+
+                entity.Property(e => e.LastDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("LAST_DATE");
 
                 entity.Property(e => e.LastName)
                     .IsRequired()
@@ -179,7 +207,13 @@ namespace InternalWebApi.Models
 
                 entity.Property(e => e.PositionId)
                     .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
                     .HasColumnName("POSITION_ID");
+
+                entity.Property(e => e.CreateDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("CREATE_DATE")
+                    .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                 entity.Property(e => e.CreateUser)
                     .IsRequired()
@@ -189,6 +223,10 @@ namespace InternalWebApi.Models
                 entity.Property(e => e.Description)
                     .HasMaxLength(500)
                     .HasColumnName("DESCRIPTION");
+
+                entity.Property(e => e.LastDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("LAST_DATE");
 
                 entity.Property(e => e.LastUser)
                     .HasMaxLength(10)
@@ -209,7 +247,13 @@ namespace InternalWebApi.Models
 
                 entity.Property(e => e.RoleId)
                     .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
                     .HasColumnName("ROLE_ID");
+
+                entity.Property(e => e.CreateDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("CREATE_DATE")
+                    .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                 entity.Property(e => e.RoleName)
                     .IsRequired()
@@ -228,7 +272,13 @@ namespace InternalWebApi.Models
 
                 entity.Property(e => e.SectionId)
                     .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
                     .HasColumnName("SECTION_ID");
+
+                entity.Property(e => e.CreateDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("CREATE_DATE")
+                    .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                 entity.Property(e => e.CreateUser)
                     .IsRequired()
@@ -242,6 +292,10 @@ namespace InternalWebApi.Models
                 entity.Property(e => e.Description)
                     .HasMaxLength(500)
                     .HasColumnName("DESCRIPTION");
+
+                entity.Property(e => e.LastDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("LAST_DATE");
 
                 entity.Property(e => e.LastUser)
                     .HasMaxLength(10)

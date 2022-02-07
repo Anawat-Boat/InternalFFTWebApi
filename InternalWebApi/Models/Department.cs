@@ -16,7 +16,9 @@ namespace InternalWebApi.Models
         public string DepartmentName { get; set; }
         public string Description { get; set; }
         public string CreateUser { get; set; }
+        public DateTime CreateDate { get; set; }
         public string LastUser { get; set; }
+        public DateTime? LastDate { get; set; }
 
         public virtual ICollection<Section> Sections { get; set; }
     }
