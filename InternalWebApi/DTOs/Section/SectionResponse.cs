@@ -5,7 +5,7 @@ namespace InternalWebApi.DTOs.Section
         public string DepartmentName { get; set; }
         public int SectionId { get; set; }
         public string SectionName { get; set; }
-        public static SectionResponse FromSection(InternalWebApi.Models.Section section)
+        public static SectionResponse FromSection(Models.Section section)
         {
             return new SectionResponse
             {

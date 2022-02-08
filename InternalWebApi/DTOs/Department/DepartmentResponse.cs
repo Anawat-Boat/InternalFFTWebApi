@@ -1,4 +1,3 @@
-
 namespace InternalWebApi.DTOs.Department
 {
     public class DepartmentResponse
@@ -15,5 +14,4 @@ namespace InternalWebApi.DTOs.Department
             };
         }
     }
-   
 }
