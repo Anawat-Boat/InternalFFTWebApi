@@ -51,3 +51,5 @@ C:\Users\anawat.mon\Documents\GitHub\Project2022\InternalFFTWebApi\InternalWebAp
 C:\Users\anawat.mon\Documents\GitHub\Project2022\InternalFFTWebApi\InternalWebApi\bin\Debug\net5.0\MySqlConnector.dll
 C:\Users\anawat.mon\Documents\GitHub\Project2022\InternalFFTWebApi\InternalWebApi\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
 C:\Users\anawat.mon\Documents\GitHub\Project2022\InternalFFTWebApi\InternalWebApi\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\anawat.mon\Documents\GitHub\Project2022\InternalFFTWebApi\InternalWebApi\bin\Debug\net5.0\Autofac.dll
+C:\Users\anawat.mon\Documents\GitHub\Project2022\InternalFFTWebApi\InternalWebApi\bin\Debug\net5.0\Autofac.Extensions.DependencyInjection.dll

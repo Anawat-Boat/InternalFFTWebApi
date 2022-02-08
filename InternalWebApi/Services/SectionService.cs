@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ASPNETCoreTraining.Database;
-using ASPNETCoreTraining.Interfaces;
-using ASPNETCoreTraining.Models;
+using InternalWebApi.Database;
+using InternalWebApi.Interfaces;
+using InternalWebApi.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace ASPNETCoreTraining.Services
+namespace InternalWebApi.Services
 {
     public class SectionService : ISectionService
     {

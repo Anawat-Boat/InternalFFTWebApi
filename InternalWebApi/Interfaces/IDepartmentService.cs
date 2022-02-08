@@ -11,6 +11,6 @@ namespace InternalWebApi.Interfaces
         Task Insert(Department department);
         Task Update(Department department);
         Task Delete(Department department);
-        Task<IEnumerable<Department>> Search(string name);
+        Task<IEnumerable<Department>> Search(string departmentName);
     }
 }

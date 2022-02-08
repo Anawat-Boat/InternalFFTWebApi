@@ -4,13 +4,13 @@ using InternalWebApi.Models;
 
 namespace ASPNETCoreTraining.Interfaces
 {
-    public interface IPositionService<T>
+    public interface IPositionService
     {
-        Task<IEnumerable<T>> GetAll();
-        Task<T> GetById(int id);
-        Task Insert(T dataItem);
-        Task Update(T dataItem);
-        Task Delete(T dataItem);
-        Task<IEnumerable<T>> Search(string name);
+        Task<IEnumerable<Position>> GetAll();
+        Task<Position> GetById(int id);
+        Task Insert(Position position);
+        Task Update(Position position);
+        Task Delete(Position position);
+        Task<IEnumerable<Position>> Search(string positionName);
     }
 }

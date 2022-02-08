@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "cyLGLZzAuy6SZkb50oJM7G/c7BQ8pqTYnQWXodQaDb4d9Haa3NrtF+Nvd33UPIjVi49Xes3a9la8ogDFBH3YXQ==",
+  "dgSpecHash": "kL11VYVf5hQ5n/CUs+08XNpcXKiYSJwdVoaShPssI/00ZQIN80QRba9sPKr1/UHSqMOlBMPxzhoPNF6LMLOZ/Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\anawat.mon\\Documents\\GitHub\\Project2022\\InternalFFTWebApi\\InternalWebApi\\InternalWebApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\anawat.mon\\.nuget\\packages\\autofac\\6.0.0\\autofac.6.0.0.nupkg.sha512",
+    "C:\\Users\\anawat.mon\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.2.0\\autofac.extensions.dependencyinjection.7.2.0.nupkg.sha512",
     "C:\\Users\\anawat.mon\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\anawat.mon\\.nuget\\packages\\google.protobuf\\3.11.4\\google.protobuf.3.11.4.nupkg.sha512",
     "C:\\Users\\anawat.mon\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

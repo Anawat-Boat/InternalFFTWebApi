@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ASPNETCoreTraining.Database;
-using ASPNETCoreTraining.Interfaces;
-using ASPNETCoreTraining.Models;
+using InternalWebApi.Database;
+using InternalWebApi.Interfaces;
+using InternalWebApi.Models;
 
 using Microsoft.EntityFrameworkCore;
 
@@ -28,19 +28,19 @@ namespace ASPNETCoreTraining.Services
         public async Task<Department> GetById(int id)
         {
             return await databaseContext.Departments
-                        .SingleOrDefaultAsync(x => x.DepartmentId == id); // SingleOrDefaultAsync 1 record only (more than 1 return null)
-        }
-
-        public async Task Insert(Department department)
-        {
-            databaseContext.Departments.Add(department);
-            await databaseContext.SaveChangesAsync();
+                        .SingleOrDefaultAsync(x => x.DepartmentId == id);
+            // SingleOrDefaultAsync 1 record only (more than 1 return null)
         }
         public async Task<IEnumerable<Department>> Search(string name)
         {
             return await databaseContext.Departments
                         .Where(p => p.DepartmentName.ToLower().Contains(name.ToLower()))
                         .ToListAsync();
+        }
+        public async Task Insert(Department department)
+        {
+            databaseContext.Departments.Add(department);
+            await databaseContext.SaveChangesAsync();
         }
 
         public async Task Update(Department department)

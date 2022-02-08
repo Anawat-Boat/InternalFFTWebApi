@@ -11,6 +11,6 @@ namespace ASPNETCoreTraining.Interfaces
         Task Insert(Employee employee);
         Task Update(Employee employee);
         Task Delete(Employee employee);
-        Task<IEnumerable<Employee>> Search(string employee);
+        Task<IEnumerable<Employee>> Search(string employeeName);
     }
 }

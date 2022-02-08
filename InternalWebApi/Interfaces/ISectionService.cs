@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using InternalWebApi.Models;
 
-namespace ASPNETCoreTraining.Interfaces
+namespace InternalWebApi.Interfaces
 {
     public interface ISectionService
     {
@@ -11,6 +11,6 @@ namespace ASPNETCoreTraining.Interfaces
         Task Insert(Section section);
         Task Update(Section section);
         Task Delete(Section section);
-        Task<IEnumerable<Section>> Search(string name);
+        Task<IEnumerable<Section>> Search(string sectionName);
     }
 }
