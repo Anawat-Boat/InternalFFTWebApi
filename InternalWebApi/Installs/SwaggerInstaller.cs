@@ -11,7 +11,7 @@ namespace InternalWebApi.Installs
         {
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ASPNET CORE Training", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ASPNET CORE InternalWebApi", Version = "v1" });
 
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {

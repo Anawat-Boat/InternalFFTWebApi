@@ -12,7 +12,6 @@ namespace InternalWebApi.Installs
                 options.AddPolicy("AllowSpecificOrigins", builder =>
                 {
                     builder.WithOrigins(
-                        "https://localhost:5000",
                         "https://localhost:5001"
                     )
                     .AllowAnyHeader()
